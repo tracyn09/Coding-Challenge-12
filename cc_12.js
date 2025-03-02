@@ -51,4 +51,22 @@ array.forEach(card => {
     card.style.backgroundColor = "lightpink"
 })
 
+//Task 3
+const inventoryList = document.getElementById(`inventoryList`)
+
+function addInventoryItem(productName) {
+    const newProduct = document.createElement(`li`)
+    newProduct.textContent = productName
+
+    newProduct.setAttribute(`class`, `product-item`)
+    inventoryList.appendChild(newProduct)
+
+    newProduct.addEventListener(`click`, () => {
+        inventoryList.removeChild(newProduct)
+    })
+}
+
+
+
+
 
