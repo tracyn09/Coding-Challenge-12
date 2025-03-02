@@ -66,6 +66,19 @@ function addInventoryItem(productName) {
     })
 }
 
+//Task 4
+const customerSection = document.getElementById("customerSection")
+const customerCards = document.querySelectorAll(".customer-card")
+
+customerSection.addEventListener("click", () => {
+    console.log("Customer section clicked")
+})
+customerCards.forEach(card => {
+    card.addEventListener("click", (event) => {
+        console.log("Customer card clicked")
+        event.stopPropagation()
+})
+})
 
 
 
